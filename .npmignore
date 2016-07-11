@@ -1,0 +1,12 @@
+.gitattributes
+.gitignore
+.gitkeep
+.jscsrc
+.jshintrc
+
+.maelstrom.yml
+.travis.yml
+appveyor.yml
+gulpfile.js
+
+*.bat

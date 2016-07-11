@@ -1,0 +1,44 @@
+{
+  "title": "maelstrom-browser",
+  "name": "maelstrom-browser",
+  "version": "0.1.0",
+  "homepage": "https://github.com/roeldev/maelstrom-browser",
+  "description": "CSS related gulp tasks for maelstrom",
+  "author": "Roel Schut (http://roelschut.nl)",
+  "license": "GPL-2.0+",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roeldev/maelstrom-browser.git"
+  },
+  "bugs": "https://github.com/roeldev/maelstrom-browser/issues",
+  "engines": {
+    "node": ">=4.2"
+  },
+  "scripts": {
+    "setup": "npm install",
+    "start": "npm run setup && gulp watch",
+    "test": "mocha --reporter spec --check-leaks --globals store@sparkles",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks --globals store@sparkles",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks --globals store@sparkles",
+    "depcheck": "depcheck --ignores=mocha-lcov-reporter"
+  },
+  "dependencies": {
+    "browser-sync": "^2.13.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "1.0.0"
+  },
+  "keywords": [
+    "gulpfriendly",
+    "gulp",
+    "maelstrom",
+    "browser",
+    "sync",
+    "reload"
+  ]
+}
